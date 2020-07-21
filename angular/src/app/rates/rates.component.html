@@ -1,0 +1,29 @@
+<router-outlet></router-outlet>
+
+<div class="content">
+
+    <p>Valūtu kursi {{ rates[0].date | date:'yyyy.MM.dd.' }}:</p>
+    <div class="rate-list">
+        <a *ngFor="let rate of rates"
+            [routerLink]="['/rate', rate.currency]"
+            routerLinkActive="selected">
+            {{ rate.currency }}
+            <span class="fr">
+                {{ rate.value * (amount||1) | number }}
+                <span *ngIf="amount != 1 && amount != 0" class="note">= {{ amount | currency:"EUR" }}</span>
+            </span>
+        </a>
+    </div>
+        
+
+    <div class="paginator">
+        <span *ngFor="let pageNr of pageNumbers"
+            [class.selected]="activePage == pageNr"
+            (click)="gotoPage(pageNr)">
+            {{ pageNr }}
+        </span>
+    </div>
+
+    <p class="r">Nomainīt bāzes vienību: <input [(ngModel)]="amount" class="mini"></p>
+
+</div>

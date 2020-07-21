@@ -1,0 +1,14 @@
+<div *ngIf="rate" class="content">
+    <a class="close" routerLink="/rate">&times;</a>
+    <div class="puse">
+        <div class="rate-card"> {{ 1 | currency:rate.currency }} = {{ 1/rate.value | currency:"EUR" }} </div>
+        <div class="rate-card"> {{ 1 | currency:"EUR" }} = {{ rate.value | currency:rate.currency }} </div>
+    </div>
+
+    <table>
+        <tr *ngFor="let rate of oldRates">
+            <td> {{ rate.date | date:'yyyy.MM.dd.' }} </td>
+            <td class="r"> {{ rate.value }} </td>
+        </tr>
+    </table>
+</div>

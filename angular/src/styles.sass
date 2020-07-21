@@ -1,1 +1,98 @@
-/* You can add global styles to this file, and also import other style files */
+body
+    font: normal 18px/1.2 Helvetica, Arial, sans-serif
+    background: #e8e8e8
+    color: #222
+a
+    color: #046
+    text-decoration: none
+table
+    width: 100%
+#appcard
+    margin: 24px auto
+    max-width: 600px
+    border-radius: 4px
+    background: #f8f8f8
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
+    overflow: hidden
+    .header 
+        padding: 24px 24px 16px
+        font-size: 32px
+        border-bottom: 1px solid #ccc
+        background: #eee
+        color: #000
+        img
+            vertical-align: middle
+        a
+            color: inherit
+    .content
+        padding: 24px
+        border-bottom: 1px solid #ccc
+        position: relative
+        a.close
+            position: absolute
+            right: 0
+            top: 0
+            padding: 8px 16px
+            color: #777
+            font-size: 24px
+            display: block
+    .footer
+        padding: 24px
+        background: #444
+        color: #888
+        a 
+            color: #777
+.rate-list
+    margin: 0 -24px
+    a
+        display: block
+        padding: 8px 16px
+        border-bottom: 1px solid #ccc
+        &.selected
+            background: #080
+            color: #fff
+.rate-card
+    background: #fff
+    border-radius: 4px
+    font-size: 24px
+    text-align: center
+    padding: 16px
+    margin: 8px
+    &:first-child
+        margin-left: 0
+    &:last-child
+        margin-right: 0
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
+
+.paginator
+    display: flex
+    justify-content: center
+    padding: 8px 0
+    &>span
+        cursor: pointer
+        display: block
+        text-align: center
+        width: 24px
+        margin: 0 8px
+        padding: 8px
+        border-radius: 4px
+        &.selected
+            background: #888
+.puse
+    display: flex
+    &>div
+        flex: 50%
+.r
+    text-align: right
+.fr
+    float: right
+.note
+    display: inline-block
+    border-radius: 2px
+    padding: 2px
+    background: #ccc
+    color: #000
+    font-size: 12px
+input.mini
+    text-align: center
+    width: 30px
